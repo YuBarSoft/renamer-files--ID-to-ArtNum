@@ -8,7 +8,7 @@ def rename_files(csv_file, folder_path):
     # Перебор строк в DataFrame
     for index, row in df.iterrows():
         # Получение артикула и ID из строки
-        article = row['Артикул']
+        article = row['Article']
         id = str(row['ID'])
         ## Поиск файлов с соответствующим ID в папке
         files = [f for f in os.listdir(folder_path) if f.startswith(id)]
